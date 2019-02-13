@@ -6065,7 +6065,7 @@ GDALRasterBand *GDALRasterBand::GetMaskBand()
             poMask = poDS->GetRasterBand(2);
             return poMask;
         }
-        else if( poDS->GetRasterBand(2)->GetRasterDataType() == GDT_UInt16 )
+        else
         {
             nMaskFlags = GMF_ALPHA | GMF_PER_DATASET;
             try
@@ -6095,7 +6095,7 @@ GDALRasterBand *GDALRasterBand::GetMaskBand()
             poMask = poDS->GetRasterBand(4);
             return poMask;
         }
-        else if( poDS->GetRasterBand(4)->GetRasterDataType() == GDT_UInt16 )
+        else
         {
             nMaskFlags = GMF_ALPHA | GMF_PER_DATASET;
             try
